@@ -18,7 +18,7 @@
   }
 
   .post-item-date {
-    color: #AAA;
+    color: #fff;
     text-align: left;
     text-transform: uppercase;
     margin-right: 16px;
@@ -26,6 +26,11 @@
 
   hr {
     margin: 60px auto;
+  }
+
+  .post-item{
+    background-color: rgba(243, 225, 201, 0.95);
+    padding: 40px;
   }
 </style>
 
@@ -39,7 +44,7 @@
     {#if index}
       <hr />
     {/if}
-    <div class="post-item">
+    <div class="post-item shadow-pop-tr">
       <h2>
         <a rel='prefetch' href='blog/{post.slug}'>{post.title}</a>
       </h2>

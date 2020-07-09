@@ -12,6 +12,9 @@
     max-width: 1400px;
     padding: 2em;
     width: 100%;
+    background-color: rgba(243, 225, 201, 0.95);
+    z-index: 100;
+    padding: 40px;
   }
 </style>
 

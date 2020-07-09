@@ -28,7 +28,7 @@
   }
 
   header p {
-    color: #AAA;
+    color: #fff;
     text-transform: uppercase;
     font-family: Rubik, sans-serif;
     font-weight: 600;
