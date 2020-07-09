@@ -39,7 +39,7 @@
 </svelte:head>
 
 <div class="container">
-  <h1>Blog</h1>
+  <h1>nu-nu</h1>
   {#each posts as post, index}
     {#if index}
       <hr />
