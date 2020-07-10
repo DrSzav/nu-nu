@@ -50,7 +50,7 @@
 </style>
 
 <nav>
-  <a class='{segment === undefined ? "selected" : ""}' href='.'>latest nu-nu</a>
-  <a class='{segment === "about" ? "selected" : ""}' href='about'>submit nu-nu</a>
-  <a rel=prefetch class='{segment === "blog" ? "selected" : ""}' href='blog'>all nu-nu</a>
+  <a class='{segment === undefined ? "selected" : ""}' href='.'>latest</a>
+  <a class='{segment === "about" ? "selected" : ""}' href='about'>submit</a>
+  <a rel=prefetch class='{segment === "blog" ? "selected" : ""}' href='blog'>browse</a>
 </nav>
