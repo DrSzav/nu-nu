@@ -6,6 +6,6 @@
   }
 </style>
 
-<a style="text-decoration:none;" href="/">
+<a style="text-align: center; text-decoration:none;" href="/">
   <h1>nu-nu tj</h1>
 </a>

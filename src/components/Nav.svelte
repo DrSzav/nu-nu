@@ -20,6 +20,7 @@
     display: block;
     position: relative;
     margin-left: 20px;
+    margin-right: 20px;
   }
 
   a:not(.selected) {
