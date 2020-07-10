@@ -248,6 +248,7 @@ td {
   max-width: 42em;
   width: 100%;
   padding: 40px;
+  background-color: rgba(255,255,255,.6);
 }
 
 .content h1 {

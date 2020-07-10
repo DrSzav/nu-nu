@@ -12,11 +12,11 @@
 }
 
 .overlay {
-  width: 100vw;
-  height: 100vh;
-  position: absolute;
-
-  background: radial-gradient(circle, transparent 0%, rgb(68, 163, 173) 100%);
+ width: 100vw;
+    height: 100vh;
+    position: absolute;
+    opacity: .6;
+    background: radial-gradient(circle, white 0%, rgb(68, 163, 173) 100%);
 }
 
 .containerPaper1 {
