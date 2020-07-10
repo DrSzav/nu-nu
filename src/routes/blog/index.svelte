@@ -11,6 +11,11 @@
 </script>
 
 <style>
+  .container{
+    z-index: 100;
+    margin-top:20vh;
+  }
+
   h2,
   .post-item-footer {
     font-family: Rubik, sans-serif;

@@ -22,6 +22,8 @@
     width: 100%;
     display: flex;
     flex-direction: column;
+    z-index:1000;
+    margin-top: 20vh;
   }
 
   footer {
