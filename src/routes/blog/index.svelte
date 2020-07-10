@@ -14,6 +14,9 @@
   .container{
     z-index: 100;
     margin-top:20vh;
+-webkit-box-shadow: 3px 5px 39px -10px rgba(0,0,0,0.97);
+-moz-box-shadow: 3px 5px 39px -10px rgba(0,0,0,0.97);
+box-shadow: 3px 5px 39px -10px rgba(0,0,0,0.97);
   }
 
   h2,
@@ -43,7 +46,7 @@
   <title>Blog</title>
 </svelte:head>
 
-<div class="container">
+<div class="container shadow-drop-2-center">
   <h1>nu-nu</h1>
   {#each posts as post, index}
     {#if index}

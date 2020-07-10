@@ -19,9 +19,13 @@
     color: azure;
   }
   header {
+    -webkit-box-shadow: inset 0px -3px 58px -28px rgba(0,0,0,0.84);
+-moz-box-shadow: inset 0px -3px 58px -28px rgba(0,0,0,0.84);
+box-shadow: inset 0px -3px 58px -28px rgba(0,0,0,0.84);
     display: flex;
     flex-direction: column;
-    
+    margin-left: auto;
+    margin-right: auto;
     max-width: 1400px;
   
     width: 100%;
