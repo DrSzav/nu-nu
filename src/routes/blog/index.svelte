@@ -35,7 +35,7 @@
 
   .post-item{
     background-color: rgba(243, 225, 201, 0.95);
-    padding: 40px;
+    padding: 4%;
   }
 </style>
 

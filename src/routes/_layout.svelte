@@ -1,5 +1,6 @@
 <script>
   import Header from '../components/Header.svelte';
+  import Headroom from "svelte-headroom";
   import TrippyPaper from '../components/TrippyPaper.svelte';
   export let segment;
 </script>
@@ -10,6 +11,7 @@
     flex-direction: column;
     min-height: 100%;
     min-height: 100vh;
+    align-items: center;
   }
 
   main {
@@ -17,7 +19,7 @@
     position: relative;
     margin: 0 auto;
     max-width: 1400px;
-    padding: 1em 2em;
+    padding: 2%;
     box-sizing: border-box;
     width: 100%;
     display: flex;
@@ -25,6 +27,19 @@
     z-index:1000;
     margin-top: 20vh;
   }
+
+  .elevated{
+    z-index: 1000;
+  }
+
+  .overlay {
+ width: 100vw;
+    height: 100vh;
+    position: fixed;
+    opacity: .6;
+    background: radial-gradient(circle, white 0%, rgb(68, 163, 173) 100%);
+}
+
 
   footer {
     color: #fff;
@@ -39,7 +54,11 @@
 </style>
 
 <div class="layout">
+  <div class="overlay"></div>
+  <Headroom class="elevated" tolerance={10}>
   <Header {segment}/>
+  </Headroom>
+
   <TrippyPaper>
   </TrippyPaper>
   <main>

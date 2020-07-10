@@ -1,4 +1,5 @@
 <script>
+
   import Logo from './Logo.svelte'
   import Nav from './Nav.svelte'
   import TrippyPaper from './TrippyPaper2.svelte'
@@ -20,7 +21,7 @@
   header {
     display: flex;
     flex-direction: column;
-    position: fixed;
+    
     max-width: 1400px;
   
     width: 100%;

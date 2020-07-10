@@ -11,13 +11,6 @@
   overflow: hidden;
 }
 
-.overlay {
- width: 100vw;
-    height: 100vh;
-    position: absolute;
-    opacity: .6;
-    background: radial-gradient(circle, white 0%, rgb(68, 163, 173) 100%);
-}
 
 .containerPaper1 {
   margin-top:-400px;
@@ -485,7 +478,7 @@
 }
 </style>
 <div class="paperback color-change-5x">
-<div class="overlay"></div>
+
 
 <div class="containerPaper1">
   <svg class="shape" viewBox="0 0 100 115" preserveAspectRatio="xMidYMin slice">

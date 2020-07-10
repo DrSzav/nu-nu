@@ -1,6 +1,7 @@
 <style>
   .body{
     position: fixed;
+    z-index: -10;
   }
 </style>
 
