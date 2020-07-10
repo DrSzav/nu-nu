@@ -1,4 +1,5 @@
 <style>
+  @import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
   .home-container {
     align-items: center;
     display: flex;
@@ -13,8 +14,7 @@
   }
 
   h1 {
-    font-weight: 700;
-    margin-bottom: 0.5em;
+    font-family: 'Nova Mono', monospace;
   }
 
   p {

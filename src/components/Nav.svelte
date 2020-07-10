@@ -9,8 +9,8 @@
     flex: 1;
     font-family: Rubik, sans-serif;
     font-weight: 700;
-    justify-content: flex-end;
-    text-transform: uppercase;
+    justify-content: space-around;
+    text-transform: uppercase
   }
 
   a {

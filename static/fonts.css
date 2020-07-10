@@ -1,3 +1,15 @@
+
+
+
+@font-face{
+  font-family: 'Permanent Marker', cursive;
+  src: url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap') format('ttf')
+}
+
+@font-face{
+  font-family: 'Nova Mono', monospace;
+  src: url('https://fonts.googleapis.com/css2?family=Nova+Mono&display=swap') format('ttf')
+}
 /******** MERRIWEATHER *********/
 
 /* merriweather-300normal - latin */

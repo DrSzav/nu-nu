@@ -6,9 +6,8 @@
 .paperback {
   margin: 0;
   background-color: #000;
-  height: 100vh;
+  height: 20vh;
   width: 100vw;
-  position: fixed;
   overflow: hidden;
 }
 
@@ -16,12 +15,12 @@
   width: 100vw;
   height: 100vh;
   position: absolute;
-  z-index: 2;
+
   background: radial-gradient(circle, transparent 0%, rgb(68, 163, 173) 100%);
 }
 
 .containerPaper1 {
-
+  margin-top:-400px;
   display: grid;
   grid-template-columns: repeat(10, 200px);
   grid-template-rows: repeat(6, 230px);
@@ -487,6 +486,7 @@
 </style>
 <div class="paperback color-change-5x">
 <div class="overlay"></div>
+
 <div class="containerPaper1">
   <svg class="shape" viewBox="0 0 100 115" preserveAspectRatio="xMidYMin slice">
     <polygon points="" fill="none" stroke="hsla(360, 100%, 10%, 1)" stroke-width="5">
@@ -1315,5 +1315,6 @@
     </polygon>
   </svg>
 </div>
+
 </div>
 

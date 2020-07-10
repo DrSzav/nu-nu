@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nova+Mono&display=swap');
+
 *, *:before, *:after {
   box-sizing: border-box;
 }
@@ -86,13 +89,17 @@ body {
 
 h1, h2, h3, h4, h5, h6 {
   font-family: Rubik, sans-serif;
-  font-weight: 700;
   line-height: 1.2;
-  margin: 0 0 0.5em 0;
 }
 
+a {
+  font-family: 'Nova Mono', monospace;
+  display: block;
+}
+
+
 h1 {
-  font-family: Merriweather, serif;
+  font-family: 'Nova Mono', monospace;
   font-size: 4em;
   margin: 0 0 1em 0;
 }

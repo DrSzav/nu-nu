@@ -2,10 +2,10 @@
   img {
     display: block;
     height: 50px;
-    width: 50px;
+    width: 100%;
   }
 </style>
 
-<a href="/">
-  <img alt="Sapper" src='logo-192.png'>
+<a style="text-decoration:none;" href="/">
+  <h1>nu-nu tj</h1>
 </a>
