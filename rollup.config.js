@@ -1,12 +1,15 @@
 import resolve from 'rollup-plugin-node-resolve';
 import replace from 'rollup-plugin-replace';
 import commonjs from 'rollup-plugin-commonjs';
+import json from '@rollup/plugin-json';
 import svelte from 'rollup-plugin-svelte';
 import babel from 'rollup-plugin-babel';
 import { terser } from 'rollup-plugin-terser';
 import config from 'sapper/config/rollup.js';
 import marked from 'marked';
 import pkg from './package.json';
+import * as igscraper from 'instagram-scraping';
+
 
 const mode = process.env.NODE_ENV;
 const dev = mode === 'development';
@@ -37,9 +40,10 @@ export default {
 				hydratable: true,
 				emitCss: true
 			}),
-			resolve(),
-			commonjs(),
-
+			json(),
+			resolve({
+				browser: true
+			  }),
 			legacy && babel({
 				extensions: ['.js', '.mjs', '.html', '.svelte'],
 				runtimeHelpers: true,
@@ -56,6 +60,20 @@ export default {
 					}]
 				]
 			}),
+			commonjs({
+				namedExports: {
+					'instagram-scraper': Object.keys(igscraper)
+				  },
+				  dynamicRequireTargets: [
+				// include using a glob pattern (either a string or an array of strings)
+				'node_modules/instagram-scraping/*.js',
+				'node_modules/instagram-scraping/node_modules/request/*.js'
+			
+				// exclude files that are known to not be required dynamically, this allows for better optimizations
+
+			  ]}),
+
+			
 
 			!dev && terser({
 				module: true
@@ -77,8 +95,20 @@ export default {
 				generate: 'ssr',
 				dev
 			}),
+			json(),
 			resolve(),
-			commonjs(),
+			commonjs({
+				namedExports: {
+					'instagram-scraper': Object.keys(igscraper)
+				  },
+				dynamicRequireTargets: [
+				// include using a glob pattern (either a string or an array of strings)
+				'node_modules/instagram-scraping/*.js',
+				'node_modules/instagram-scraping/node_modules/request/*.js'
+			
+				// exclude files that are known to not be required dynamically, this allows for better optimizations
+
+			  ]}),
 			markdown()
 		],
 		external: Object.keys(pkg.dependencies).concat(

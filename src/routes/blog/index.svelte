@@ -21,7 +21,7 @@ box-shadow: 3px 5px 39px -10px rgba(0,0,0,0.97);
 
   h2,
   .post-item-footer {
-    font-family: Rubik, sans-serif;
+    /*font-family: Rubik, sans-serif;*/
     font-weight: 700;
   }
 

@@ -1,5 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Nova+Mono&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cantata+One&family=Chau+Philomene+One:ital@0;1&family=Muli:ital,wght@0,400;1,300&family=Special+Elite&display=swap');
+
 
 *, *:before, *:after {
   box-sizing: border-box;
@@ -81,25 +83,35 @@
 
 body {
   margin: 0;
-  font-family: Merriweather, serif;
+  font-family: 'Chau Philomene One';
+  
+ /* 
+ font-family: 'Muli', sans-serif;
+  
+ font-family: 'Cantata One', serif;
+  font-family: 'Special Elite', cursive;
+ font-family: 'Chau Philomene One', sans-serif;
+  font-family: 'Muli', sans-serif;
+  font-family: 'Special Elite', cursive;
+  */
   font-size: 16px;
   line-height: 1.6;
   color: #000;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1, h3, h4, h5, h6 {
   font-family: Rubik, sans-serif;
   line-height: 1.2;
 }
 
 a {
-  font-family: 'Nova Mono', monospace;
+ /* font-family: 'Nova Mono', monospace; */
   display: block;
 }
 
 
 h1 {
-  font-family: 'Nova Mono', monospace;
+ /* font-family: 'Nova Mono', monospace; */
   font-size: 4em;
   margin: 0 0 1em 0;
 }
@@ -107,6 +119,8 @@ h1 {
 h2 {
   margin: 1.6em 0 0 0;
   font-size: 1.8em;
+  font-family: 'Special Elite', cursive;
+  
 }
 
 h3 {

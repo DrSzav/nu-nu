@@ -12,7 +12,7 @@ require('prismjs/components/prism-jsx.min')
 const cwd = process.cwd()
 const POSTS_DIR = path.join(cwd, 'src/routes/blog/posts/')
 const EXCERPT_SEPARATOR = '<!-- more -->'
-const renderer = new marked.Renderer()
+const renderer = new marked.Renderer();
 const linkRenderer = renderer.link;
 renderer.link = (href, title, text) => {
     const html = linkRenderer.call(renderer, href, title, text)
@@ -33,6 +33,16 @@ renderer.code = (code, language) => {
   const parser = prism.languages[language] || prism.languages.html
   const highlighted = prism.highlight(code, parser, language)
   return `<pre class="language-${language}"><code class="language-${language}">${highlighted}</code></pre>`
+}
+
+const paragraphRender = renderer.paragraph;
+renderer.paragraph = (text) => {
+  console.log('p',text)
+    let text2 = text.replace(/e<iframe/g, '</p><iframe');
+    console.log('p',text2)
+    let text3 = text2.replace(/<\/iframe>/g, '</iframe><p>');
+    console.log('p',text2)
+    return text;
 }
 
 marked.setOptions({ renderer })

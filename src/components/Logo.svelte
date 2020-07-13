@@ -7,5 +7,5 @@
 </style>
 
 <a style="text-align: center; text-decoration:none;" href="/">
-  <h1>nu-nu tj</h1>
+  <h1>tj nu-nu</h1>
 </a>

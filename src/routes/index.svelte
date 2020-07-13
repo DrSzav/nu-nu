@@ -1,4 +1,76 @@
+<script context="module">
+  
+  import { getInstagramPhotos } from './instascrape';
+  import { onMount } from 'svelte';
+let photos;
+
+
+let photoPromise = Promise.resolve([]);
+export async function preload(page,session){
+    const photos = await getInstagramPhotos(3);
+    console.log(photos);
+    return { photos };
+}
+
+</script>
+
+<script>
+  export let photos;
+</script>
+
+
+<svelte:head>
+  <title>Sapper Blog Template</title>
+</svelte:head>
+
+<h1>#tjnunu</h1>
+<div class="photoContainer">
+
+{#each photos as photorow}
+    <div class="row">
+    {#each photorow as photo}
+    <div class="photoHolder">
+      <a class="photoLink" href="https://instagram.com/p/{photo.shortcode}"><img alt={photo.text} src={photo.display_url}/></a>
+     </div>
+    {/each}
+  </div>
+{/each}
+
+
+</div>
+<div class="home-container">
+  <div class="home-copy">
+    <h1>Welcome to nu-nu</h1>
+    <p>Check out the docs on <a href="https://www.github.com/Charca/sapper-blog-template" target="_blank">GitHub</a> to get started.</p>
+  </div>
+
+  <figure>
+    <img alt='Person typing on laptop' src='undraw-illustration.svg'>
+    <figcaption>Illustration thanks to <a href="https://undraw.co" target="_blank">Undraw</a></figcaption>
+  </figure>
+</div>
+
 <style>
+  .photoLink{
+
+  }
+  .photoHolder{
+    display: flex;
+    flex:1;
+    align-items: center;
+  }
+  .row{
+    min-width: 30%;
+    display:flex;
+    flex:1;
+    flex-direction: column;
+    padding: 10px;
+  }
+
+  .photoContainer{
+    display: flex;
+    flex-wrap: wrap;
+  }
   @import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
   .home-container {
     align-items: center;
@@ -63,19 +135,3 @@
     }
   }
 </style>
-
-<svelte:head>
-  <title>Sapper Blog Template</title>
-</svelte:head>
-
-<div class="home-container">
-  <div class="home-copy">
-    <h1>Welcome to nu-nu</h1>
-    <p>Check out the docs on <a href="https://www.github.com/Charca/sapper-blog-template" target="_blank">GitHub</a> to get started.</p>
-  </div>
-
-  <figure>
-    <img alt='Person typing on laptop' src='undraw-illustration.svg'>
-    <figcaption>Illustration thanks to <a href="https://undraw.co" target="_blank">Undraw</a></figcaption>
-  </figure>
-</div>
