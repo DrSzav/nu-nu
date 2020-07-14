@@ -16,6 +16,7 @@ export async function preload(page,session){
 
 <script>
   export let photos;
+  preload()
 </script>
 
 
