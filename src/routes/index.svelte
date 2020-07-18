@@ -2,10 +2,9 @@
 
 export async function preload(page,session){
 
-  const res = await this.fetch(`instascrape.json`);
-		const photos = await res.json();
+  return this.fetch(`instascrape.json`).then(r => r.json()).then(photos => {
     return { photos }
-  
+  });
 }
 
 </script>
