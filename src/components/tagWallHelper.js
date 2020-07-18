@@ -1,11 +1,11 @@
 
 
 export async function getInstagramPhotos(colCount = 3){
-  if (!process.browser){
+
   var ig = await require('instagram-scraping');
   let row = [];
   let photorows = [];
-  let results = await ig.scrapeTag('tjnunu');
+  let results = await ig.scrapeTag('tijuana');
     let allphotos = results.medias;
     let cols = Math.ceil(allphotos.length / colCount);
     for(let i = 1; i < allphotos.length + 1; i++){
@@ -21,5 +21,5 @@ export async function getInstagramPhotos(colCount = 3){
     }
     console.log(photorows[0][0])
    return photorows;
-  }
+  
 }

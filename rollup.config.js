@@ -61,6 +61,7 @@ export default {
 				]
 			}),
 			commonjs({
+				//include:'instascrape.js',
 				namedExports: {
 					'instagram-scraper': Object.keys(igscraper)
 				  },

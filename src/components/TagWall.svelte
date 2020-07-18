@@ -1,25 +1,30 @@
 <script context="module">
-
-export async function preload(page,session){
-
-  const res = await this.fetch(`instascrape.json`);
-		const photos = await res.json();
-    return { photos }
   
+  import { getInstagramPhotos } from './tagWallHelper';
+  import { onMount } from 'svelte';
+
+let photoPromise = Promise.resolve([]);
+async function preload(){
+ 
+    const photos = await getInstagramPhotos(3);
+    
+    return { photos } ;
 }
 
 </script>
 
 <script>
-  export let photos;
-  
- // preload();
+  let photos = [];
+  onMount(async ()=>{
+     console.log("fetching photos");
+    let results = getInstagramPhotos(3);
+    console.log("results:")
+    console.log(results);
+    photos = results ? results : [];
+    console.log(photos);
+  });
 </script>
 
-
-<svelte:head>
-  <title>Sapper Blog Template</title>
-</svelte:head>
 
 <h1>#tjnunu</h1>
 <div class="photoContainer">
@@ -34,19 +39,8 @@ export async function preload(page,session){
   </div>
 {/each}
 
-
 </div>
-<div class="home-container">
-  <div class="home-copy">
-    <h1>Welcome to nu-nu</h1>
-    <p>Check out the docs on <a href="https://www.github.com/Charca/sapper-blog-template" target="_blank">GitHub</a> to get started.</p>
-  </div>
 
-  <figure>
-    <img alt='Person typing on laptop' src='undraw-illustration.svg'>
-    <figcaption>Illustration thanks to <a href="https://undraw.co" target="_blank">Undraw</a></figcaption>
-  </figure>
-</div>
 
 <style>
   .photoLink{
