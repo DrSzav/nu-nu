@@ -1,17 +1,12 @@
 <script context="module">
 
-export async function preload(page,session){
-
-  return this.fetch(`instascrape.json`).then(r => r.json()).then(photos => {
-    return { photos }
-  });
-}
+   import photos from '../scrapedData.json'
 
 </script>
 
 <script>
-  export let photos;
-  
+
+ 
  // preload();
 </script>
 

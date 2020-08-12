@@ -1,6 +1,7 @@
 
+var fs = require('fs');
 
-export async function getInstagramPhotos(colCount = 3){
+async function getInstagramPhotos(colCount){
 
   var ig = await require('instagram-scraping');
   let row = [];
@@ -21,5 +22,14 @@ export async function getInstagramPhotos(colCount = 3){
     }
     console.log(photorows[0][0])
    return photorows;
-  
 }
+async function saveToFile(){
+  let photoData = await getInstagramPhotos(3);
+
+  fs.writeFile('src/scrapedData.json', JSON.stringify(photoData), function (err) {
+    if (err) throw err;
+    console.log('Saved!');
+  });
+}
+
+saveToFile();

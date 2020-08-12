@@ -1,28 +1,19 @@
-<script context="module">
-  
-  import { getInstagramPhotos } from './tagWallHelper';
+<script>
+
+  /*
   import { onMount } from 'svelte';
 
 let photoPromise = Promise.resolve([]);
-async function preload(){
- 
-    const photos = await getInstagramPhotos(3);
-    
-    return { photos } ;
+export async function preload(){
+  const response = await this.fetch('static/data/scrapedData.json');
+        const responseJson = await response.json();
+        return {
+            photos: responseJson
+        }
 }
+*/
+import photos from 'static/data/scrapedData.json'
 
-</script>
-
-<script>
-  let photos = [];
-  onMount(async ()=>{
-     console.log("fetching photos");
-    let results = getInstagramPhotos(3);
-    console.log("results:")
-    console.log(results);
-    photos = results ? results : [];
-    console.log(photos);
-  });
 </script>
 
 
