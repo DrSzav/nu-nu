@@ -36,7 +36,7 @@ box-shadow: 3px 5px 39px -10px rgba(0,0,0,0.97);
   }
 
   .post-item{
-    background-color: rgba(255, 255, 255, 0.2);
+    /* background-color: rgba(255, 255, 255, 0.2); */
     padding: 4%;
     text-align: center;
     font-size: 150%;

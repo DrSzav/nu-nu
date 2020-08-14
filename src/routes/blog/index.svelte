@@ -39,7 +39,7 @@ box-shadow: 3px 5px 39px -10px rgba(0,0,0,0.97);
   }
 
   .post-item{
-    background-color: rgba(250, 231, 255, 0.8);
+    /* background-color: rgba(250, 231, 255, 0.8); */
     padding: 4%;
   }
 </style>
@@ -57,7 +57,7 @@ box-shadow: 3px 5px 39px -10px rgba(0,0,0,0.97);
     <div class="post-item shadow-pop-tr">
      
       <a rel='prefetch' href='blog/{post.fileName}'>
-        <img style="opacity:.7;" src='{post.thumbnail}' alt='{post.title}-img'/>
+        <img style="opacity:.8;" src='{post.thumbnail}' alt='{post.title}-img'/>
       </a>
        <h2>
         <a rel='prefetch' href='blog/{post.fileName}'>{post.title}</a>

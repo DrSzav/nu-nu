@@ -30,7 +30,10 @@
 </div>
 
 <h1 style="margin-top:200px;">La Pared de #tjnunu</h1>
-<h3>quieres compartir algo bien shido? pues pon #tjnunu en tus fotos, es tan facil no seas flojo.</h3>
+<div title="giphy gif">
+<iframe src="https://giphy.com/embed/3oKIPoaTdtR3qMU2Ig" width="480" height="291" frameBorder="0" class="giphy-embed" allowFullScreen style="pointer-events: none;"></iframe>
+</div>
+<h3 style="margin-bottom:100px;">quieres compartir algo bien shido? pues pon #tjnunu en tus fotos, es tan facil no seas flojo.</h3>
 <div class="photoContainer">
 
 {#each photos as photorow}
@@ -64,11 +67,14 @@
 }
   .photoLink{
     overflow: hidden;
+         -webkit-box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.35);
+  box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.35);
   }
   .photoHolder{
     display: flex;
     flex:1;
     align-items: center;
+    text-align: center;
   }
   .row{
     min-width: 30%;
