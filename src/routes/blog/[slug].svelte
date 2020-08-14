@@ -2,6 +2,7 @@
   export async function preload({ params, query }) {
     // the `slug` parameter is available because
     // this file is called [slug].html
+    console.log('params svelte:',params)
     const res = await this.fetch(`blog/${params.slug}.json`);
     const data = await res.json();
 
@@ -54,5 +55,4 @@
     {@html post.html}
   </article>
   <hr />
-  <Bio />
 </div>

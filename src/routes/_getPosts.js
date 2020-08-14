@@ -11,7 +11,7 @@ const getAllPosts = () => {
       );
       //console.log(fileName.split('.')[0]);
       let ret = grayMatter(post).data;
-      ret.fileName = fileName.split('.')[0];
+      ret.fileName = fileName.split('.')[0]
       console.log(ret);
       return ret;
     }).sort(function(a,b){
@@ -24,7 +24,10 @@ const getAllPosts = () => {
     return [];
   }
 };
+let AllPosts = getAllPosts();
 
+export default AllPosts;
+/*
 export function get(_, res) {
   res.writeHead(200, {
     "Content-Type": "application/json",
@@ -32,3 +35,4 @@ export function get(_, res) {
   const posts = getAllPosts();
   res.end(JSON.stringify(posts));
 }
+*/

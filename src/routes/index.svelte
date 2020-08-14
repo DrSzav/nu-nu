@@ -1,11 +1,20 @@
 <script context="module">
+  import SinglePost from '../components/SinglePost.svelte';
 
    import photos from '../scrapedData.json'
-
+   
+    export function preload({ params, query }) {
+    return this.fetch(`blog.json`).then(r => r.json()).then(posts => {
+      console.log('posts:',posts)
+      return { posts };
+    });
+  }
 </script>
 
 <script>
-
+  export let posts;
+   
+   
  
  // preload();
 </script>
@@ -14,7 +23,13 @@
 <svelte:head>
   <title>tj nu-nu</title>
 </svelte:head>
-<h1>La Pared de #tjnunu</h1>
+<div class="nunu-container">
+<h1>mas nuevo que tu cara</h1>
+<SinglePost post={posts[0]}/>
+
+</div>
+
+<h1 style="margin-top:200px;">La Pared de #tjnunu</h1>
 <h3>quieres compartir algo bien shido? pues pon #tjnunu en tus fotos, es tan facil no seas flojo.</h3>
 <div class="photoContainer">
 
@@ -37,21 +52,16 @@
   </div>
 {/each}
 
+<SinglePost post={posts[1]}/>
+<SinglePost post={posts[2]}/>
 
-</div>
-<div class="home-container">
-  <div class="home-copy">
-   
-    <p>Check out the docs on <a href="https://www.github.com/Charca/sapper-blog-template" target="_blank">GitHub</a> to get started.</p>
-  </div>
-
-  <figure>
-    <img alt='Person typing on laptop' src='undraw-illustration.svg'>
-    <figcaption>Illustration thanks to <a href="https://undraw.co" target="_blank">Undraw</a></figcaption>
-  </figure>
 </div>
 
 <style>
+.nunu-container{
+  max-width: 800px;
+  margin: auto;
+}
   .photoLink{
     overflow: hidden;
   }

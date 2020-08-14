@@ -1,14 +1,11 @@
 <script context="module">
-  export function preload({ params, query }) {
-    return this.fetch(`blog.json`).then(r => r.json()).then(posts => {
-      console.log('posts:',posts)
-      return { posts };
-    });
-  }
+  import formatDate from 'date-fns/format';
 </script>
 
 <script>
-  export let posts;
+  export let post;
+
+  $: printDate = formatDate(new Date(post.date), 'MMMM D, YYYY');
 </script>
 
 <style>
@@ -39,8 +36,11 @@ box-shadow: 3px 5px 39px -10px rgba(0,0,0,0.97);
   }
 
   .post-item{
-    background-color: rgba(250, 231, 255, 0.8);
+    background-color: rgba(255, 255, 255, 0.2);
     padding: 4%;
+    text-align: center;
+    font-size: 150%;
+    margin:5%;
   }
 </style>
 
@@ -48,23 +48,16 @@ box-shadow: 3px 5px 39px -10px rgba(0,0,0,0.97);
   <title>Blog</title>
 </svelte:head>
 
-<div class="container shadow-drop-2-center">
-  <h1>nu-nu</h1>
-  {#each posts as post, index}
-    {#if index}
-      <hr />
-    {/if}
     <div class="post-item shadow-pop-tr">
-     
+      <h2>
+        <a rel='prefetch' href='blog/{post.fileName}'>{post.title}</a>
+      </h2>
+          <div class="post-item-footer">
+        <span class="post-item-date">{printDate}</span>
+      </div>
       <a rel='prefetch' href='blog/{post.fileName}'>
         <img style="opacity:.7;" src='{post.thumbnail}' alt='{post.title}-img'/>
       </a>
-       <h2>
-        <a rel='prefetch' href='blog/{post.fileName}'>{post.title}</a>
-      </h2>
-      <div class="post-item-footer">
-        <span class="post-item-date">— {post.date}</span>
-      </div>
+
+  
     </div>
-  {/each}
-</div>
