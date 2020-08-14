@@ -54,7 +54,7 @@ box-shadow: 3px 5px 39px -10px rgba(0,0,0,0.97);
     {/if}
     <div class="post-item shadow-pop-tr">
       <h2>
-        <a rel='prefetch' href='blog/{post.slug}'>{post.title}</a>
+        <a rel='prefetch' href='blog/{post.title}'>{post.title}</a>
       </h2>
       <p>{post.excerpt}</p>
       <div class="post-item-footer">
