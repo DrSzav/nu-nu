@@ -12,17 +12,26 @@
 
 
 <svelte:head>
-  <title>Sapper Blog Template</title>
+  <title>tj nu-nu</title>
 </svelte:head>
-
-<h1>#tjnunu</h1>
+<h1>La Pared de #tjnunu</h1>
+<h3>quieres compartir algo bien shido? pues pon #tjnunu en tus fotos, es tan facil no seas flojo.</h3>
 <div class="photoContainer">
 
 {#each photos as photorow}
     <div class="row">
     {#each photorow as photo}
+   
     <div class="photoHolder">
-      <a class="photoLink" href="https://instagram.com/p/{photo.shortcode}"><img alt={photo.text} src={photo.display_url}/></a>
+      <a class="photoLink" href="https://instagram.com/p/{photo.shortcode}">
+       {#if photo.is_video}
+         <p style="font-size:500%; margin:0"> 📼</p>
+         <p style="font-size:100%;">{photo.text}</p>
+        {:else}
+            <img alt={photo.text} src={photo.display_url}/>
+        {/if}
+      </a>
+  
      </div>
     {/each}
   </div>
@@ -32,7 +41,7 @@
 </div>
 <div class="home-container">
   <div class="home-copy">
-    <h1>Welcome to nu-nu</h1>
+   
     <p>Check out the docs on <a href="https://www.github.com/Charca/sapper-blog-template" target="_blank">GitHub</a> to get started.</p>
   </div>
 
@@ -44,7 +53,7 @@
 
 <style>
   .photoLink{
-
+    overflow: hidden;
   }
   .photoHolder{
     display: flex;

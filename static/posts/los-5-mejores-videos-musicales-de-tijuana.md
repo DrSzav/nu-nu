@@ -1,5 +1,4 @@
 ---
-slug: Los Mejores 5 Videos Ahora
 title: "Los 5 Mejores Videos Musicales de Tijuana "
 date: 2020-08-14T06:38:59.284Z
 thumbnail: /uploads/simon-noh-0rmby-3otei-unsplash.jpg

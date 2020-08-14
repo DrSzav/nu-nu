@@ -18,6 +18,7 @@
 -webkit-box-shadow: 3px 5px 39px -10px rgba(0,0,0,0.97);
 -moz-box-shadow: 3px 5px 39px -10px rgba(0,0,0,0.97);
 box-shadow: 3px 5px 39px -10px rgba(0,0,0,0.97);
+    text-align:center;
   }
 
   h2,
@@ -27,7 +28,7 @@ box-shadow: 3px 5px 39px -10px rgba(0,0,0,0.97);
   }
 
   .post-item-date {
-    color: #fff;
+    color: #222;
     text-align: left;
     text-transform: uppercase;
     margin-right: 16px;
@@ -54,12 +55,15 @@ box-shadow: 3px 5px 39px -10px rgba(0,0,0,0.97);
       <hr />
     {/if}
     <div class="post-item shadow-pop-tr">
-      <h2>
+     
+      <a rel='prefetch' href='blog/{post.slug}'>
+        <img style="opacity:.7;" src='{post.thumbnail}' alt='{post.title}-img'/>
+      </a>
+       <h2>
         <a rel='prefetch' href='blog/{post.slug}'>{post.title}</a>
       </h2>
-      <p>{post.excerpt}</p>
       <div class="post-item-footer">
-        <span class="post-item-date">— {post.printDate}</span>
+        <span class="post-item-date">— {post.date}</span>
       </div>
     </div>
   {/each}
