@@ -9,7 +9,9 @@ const getAllPosts = () => {
         path.resolve("static/posts", fileName),
         "utf-8"
       );
-      return grayMatter(post).data;
+      let ret = grayMatter(post).data;
+      console.log(ret);
+      return ret;
     });
   } catch (e) {
     return [];
