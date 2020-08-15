@@ -41,14 +41,13 @@
     {#each photorow as photo}
    
     <div class="photoHolder">
+    {#if !photo.is_video}
       <a class="photoLink" href="https://instagram.com/p/{photo.shortcode}">
-       {#if photo.is_video}
-         <p style="font-size:500%; margin:0"> 📼</p>
-         <p style="font-size:100%;">{photo.text}</p>
-        {:else}
+      
             <img style="margin-bottom:-10px;" alt={photo.text} src={photo.display_url}/>
+        </a>
         {/if}
-      </a>
+   
   
      </div>
     {/each}
@@ -75,7 +74,7 @@
     flex:1;
     align-items: center;
     text-align: center;
-    margin-bottom: 5%;
+    margin-bottom: 5px;
   }
   .row{
     min-width: 30%;
