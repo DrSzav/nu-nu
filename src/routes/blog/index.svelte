@@ -15,9 +15,9 @@
   .container{
     z-index: 100;
     margin-top:20vh;
--webkit-box-shadow: 3px 5px 39px -10px rgba(0,0,0,0.97);
+/* -webkit-box-shadow: 3px 5px 39px -10px rgba(0,0,0,0.97);
 -moz-box-shadow: 3px 5px 39px -10px rgba(0,0,0,0.97);
-box-shadow: 3px 5px 39px -10px rgba(0,0,0,0.97);
+box-shadow: 3px 5px 39px -10px rgba(0,0,0,0.97); */
     text-align:center;
   }
 
@@ -63,7 +63,7 @@ box-shadow: 3px 5px 39px -10px rgba(0,0,0,0.97);
         <a rel='prefetch' href='blog/{post.fileName}'>{post.title}</a>
       </h2>
       <div class="post-item-footer">
-        <span class="post-item-date">— {post.date}</span>
+        <span class="post-item-date">— {post.printDate}</span>
       </div>
     </div>
   {/each}

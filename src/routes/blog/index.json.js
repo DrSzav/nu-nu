@@ -1,6 +1,7 @@
 import fs from "fs";
 import path from "path";
 import grayMatter from "gray-matter";
+import formatDate from 'date-fns/format';
 
 const getAllPosts = () => {
   try {
@@ -13,6 +14,7 @@ const getAllPosts = () => {
       let ret = grayMatter(post).data;
       ret.fileName = fileName.split('.')[0];
       console.log(ret);
+      ret.printDate = formatDate(new Date(ret.date), 'MMMM D, YYYY');
       return ret;
     }).sort(function(a,b){
       // Turn your strings into dates, and then subtract them

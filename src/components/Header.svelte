@@ -55,7 +55,7 @@ box-shadow: inset 0px -3px 58px -28px rgba(0,0,0,0.84);
   
     width: 100%;
     background-color: rgba(243, 225, 201, 0.95);
-    z-index: 100;
+    z-index: 1000000000;
 
     align-items: center;
   }

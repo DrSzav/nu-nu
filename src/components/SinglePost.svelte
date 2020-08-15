@@ -56,7 +56,7 @@ box-shadow: 3px 5px 39px -10px rgba(0,0,0,0.97);
         <span class="post-item-date">{printDate}</span>
       </div>
       <a rel='prefetch' href='blog/{post.fileName}'>
-        <img style="opacity:.7;" src='{post.thumbnail}' alt='{post.title}-img'/>
+        <img style="opacity:.8;" src='{post.thumbnail}' alt='{post.title}-img'/>
       </a>
 
   

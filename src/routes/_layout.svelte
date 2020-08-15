@@ -24,20 +24,21 @@
     width: 100%;
     display: flex;
     flex-direction: column;
-    z-index:1000;
+    z-index:-10;
     margin-top: 20vh;
   }
 
   .elevated{
-    z-index: 1000;
+    z-index: 10000;
   }
 
   .overlay {
  width: 100vw;
     height: 100vh;
     position: fixed;
-    opacity: .6;
+    opacity: .8;
     background: radial-gradient(circle, white 0%, rgb(68, 163, 173) 100%);
+    z-index: -10;
 }
 
 

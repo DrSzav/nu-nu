@@ -31,7 +31,7 @@
 
 <h1 style="margin-top:200px;">La Pared de #tjnunu</h1>
 <div title="giphy gif">
-<iframe src="https://giphy.com/embed/3oKIPoaTdtR3qMU2Ig" width="480" height="291" frameBorder="0" class="giphy-embed" allowFullScreen style="pointer-events: none;"></iframe>
+<iframe src="https://giphy.com/embed/3oKIPoaTdtR3qMU2Ig" frameBorder="0" class="giphy-embed" allowFullScreen style="pointer-events: none; width:100%;"></iframe>
 </div>
 <h3 style="margin-bottom:100px;">quieres compartir algo bien shido? pues pon #tjnunu en tus fotos, es tan facil no seas flojo.</h3>
 <div class="photoContainer">
@@ -46,7 +46,7 @@
          <p style="font-size:500%; margin:0"> 📼</p>
          <p style="font-size:100%;">{photo.text}</p>
         {:else}
-            <img alt={photo.text} src={photo.display_url}/>
+            <img style="margin-bottom:-10px;" alt={photo.text} src={photo.display_url}/>
         {/if}
       </a>
   
@@ -75,6 +75,7 @@
     flex:1;
     align-items: center;
     text-align: center;
+    margin-bottom: 5%;
   }
   .row{
     min-width: 30%;
