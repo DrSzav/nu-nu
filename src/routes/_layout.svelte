@@ -24,7 +24,7 @@
     width: 100%;
     display: flex;
     flex-direction: column;
-    z-index:-10;
+    z-index:20;
     margin-top: 20vh;
   }
 
