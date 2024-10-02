@@ -1,4 +1,4 @@
-# sapper-blog-template
+# Nu Nu is a music local arts blog that is an adaption of svelete + sapper template
 
 A starter template for building markdown-powered blogs with [Sapper](https://github.com/sveltejs/sapper) and [Svelte](https://github.com/sveltejs/svelte).
 
